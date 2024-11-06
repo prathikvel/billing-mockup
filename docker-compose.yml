@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: ./app
+      target: prod
+    ports: ["8080:${PORT}"]
+    volumes:
+      - ./app/src:/home/node/src
+    env_file: [".env"]
