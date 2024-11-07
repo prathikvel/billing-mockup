@@ -4,6 +4,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
+
+import SearchForm from "./components/SearchForm";
+import ResultsTable from "./components/ResultsTable";
 
 interface TabPanelProps {
   value: number;
@@ -23,19 +27,21 @@ const App = () => {
 
   return (
     <Container maxWidth="md">
+      <Typography variant="h2">Tax Bill PWA Mockup</Typography>
+
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs value={value} onChange={handleChange}>
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
+            <Tab label="Search Form" />
+            <Tab label="Results Table" />
           </Tabs>
         </Box>
 
         <TabPanel value={value} index={0}>
-          Item One
+          <SearchForm />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <ResultsTable />
         </TabPanel>
       </Box>
     </Container>
