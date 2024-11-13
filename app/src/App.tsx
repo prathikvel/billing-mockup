@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <Container maxWidth="md">
-      <Typography variant="h2">Tax Bill PWA Mockup</Typography>
+      <Typography variant="h2">PWA Mockup</Typography>
 
       <Box sx={{ width: "100%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -37,12 +37,8 @@ const App = () => {
           </Tabs>
         </Box>
 
-        <TabPanel value={value} index={0}>
-          <SearchForm />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <ResultsTable />
-        </TabPanel>
+        <TabPanel value={value} index={0}><SearchForm /></TabPanel>
+        <TabPanel value={value} index={1}><ResultsTable /></TabPanel>
       </Box>
     </Container>
   );
